@@ -16,6 +16,8 @@ namespace Jane
         private string parameterDead= "開關_死亡";
         private Animator ani;
         private Rigidbody2D rig;
+        private float h;
+        private float v;
 
         #endregion
         #region 事件:程式的入口(unity)
@@ -29,14 +31,29 @@ namespace Jane
         private void Update()
         {
             GetInput();
+            Move();
+            Rotate();
         }
         #endregion
         #region 方法:較複雜行為/移動功能/更新動畫
         private void GetInput() 
         {
             //使用靜態資料
-            float h = Input.GetAxis("Horizontal");
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
             print("水平軸向值:" + h);
+        }
+
+        private void Move()
+        {
+            rig.velocity = new Vector2(h, v)* speed;
+            ani.SetBool(parameterRun, h != 0 || v !=0);
+
+        }
+
+        private void Rotate() 
+        {
+            transform.eulerAngles = new Vector3(0, h >= 0 ? 0 : 180, 0);
         }
         #endregion
     }
