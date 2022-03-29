@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5bd16a512dee24fbb1cd1bf6b9fcfa, type: 3}
   m_Name: "\u706B\u7403"
   m_EditorClassIdentifier: 
+  speedFly: 200
+  attack: 10
+  countStart: 3
+  countMax: 6
+  interval: 4
+  v2SpawnPoint:
+  - {x: -0.5, y: 0.5}
+  - {x: 0, y: 0.2}
+  - {x: 0, y: 0}
+  - {x: 0, y: -0.5}
+  - {x: 0.5, y: 0.5}

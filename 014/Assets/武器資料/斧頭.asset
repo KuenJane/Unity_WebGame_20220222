@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5bd16a512dee24fbb1cd1bf6b9fcfa, type: 3}
   m_Name: "\u65A7\u982D"
   m_EditorClassIdentifier: 
+  speedFly: 350
+  attack: 15
+  countStart: 1
+  countMax: 3
+  interval: 3.5
+  v2SpawnPoint:
+  - {x: -0.5, y: 0, z: 0}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: 0.5, y: 0, z: 0}
+  goWeapon: {fileID: 7982938485789040824, guid: 18e59ad3f3339094b9e206ea6ff71374, type: 3}
