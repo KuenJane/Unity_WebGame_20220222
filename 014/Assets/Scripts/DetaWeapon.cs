@@ -21,6 +21,8 @@ namespace Jane
         public Vector3 [] v2SpawnPoint;
         [Header("武器物件")]
         public GameObject goWeapon;
+        [Header("飛行方向")]
+        public Vector3 v3Direction;
     }
 
 }
