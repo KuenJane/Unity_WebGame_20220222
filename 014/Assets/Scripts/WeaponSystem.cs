@@ -5,7 +5,8 @@ namespace Jane
     {
         [SerializeField, Header("武器資料")]
         private DetaWeapon dataWeapon;
-
+        [SerializeField, Header("武器刪除時間"),Range(0,5)]
+        private float weaponDestroyTime = 3.5f;
         private float timer;
 
         private void OnDrawGizmos()
@@ -26,6 +27,7 @@ namespace Jane
             //2d 物理 忽略圖層碰撞(圖層 1 /圖層 2)
             Physics2D.IgnoreLayerCollision(3, 6);//玩家 武器 不碰撞
             Physics2D.IgnoreLayerCollision(6, 6);//武器 武器 不碰撞
+            Physics2D.IgnoreLayerCollision(6, 7);
         }
 
         private void Update()
@@ -49,6 +51,8 @@ namespace Jane
 
                 
                 timer = 0;
+
+                Destroy(temp,weaponDestroyTime);//刪除物件(遊戲物件，延遲時間)
             }
             else 
             {
