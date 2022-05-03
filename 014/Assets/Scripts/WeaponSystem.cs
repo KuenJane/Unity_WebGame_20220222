@@ -53,6 +53,7 @@ namespace Jane
                 timer = 0;
 
                 Destroy(temp,weaponDestroyTime);//刪除物件(遊戲物件，延遲時間)
+                temp.GetComponent<Weapon>().attack = dataWeapon.attack;
             }
             else 
             {

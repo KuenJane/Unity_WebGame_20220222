@@ -16,6 +16,9 @@ namespace Jane
         public float expDropProbability = 1;
         [Header("掉落經驗類型")]
         public TypeExp typeExp;
+        [Header("靠近目標停止距離")]
+        public float stopDistance = 3;
+
 
         public enum TypeExp 
         {
